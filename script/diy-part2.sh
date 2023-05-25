@@ -12,7 +12,7 @@
 # 修改openwrt登陆地址,把下面的192.168.123.1修改成你想要的就可以了
 sed -i 's/192.168.1.1/192.168.123.1/g' package/base-files/files/bin/config_generate
 
-# 修改主机名字，把MSG1500修改你喜欢的就行（不能纯数字或者使用中文）
+# 修改主机名字，把E8820S修改你喜欢的就行（不能纯数字或者使用中文）
 sed -i 's/OpenWrt/E8820S/g' package/base-files/files/bin/config_generate
 
 # 修改开源驱动wifi名称
@@ -25,7 +25,7 @@ sed -i 's/OpenWRT-2.4G/E8820S/g' package/kernel/mt-drivers/mt7615d/files/lib/wif
 sed -i 's/OpenWRT-5G/E8820S-5G/g' package/kernel/mt-drivers/mt7615d/files/lib/wifi/mt_dbdc.sh
 
 # 添加个性信息
-#sed -i 's/22.5.5/22.5.5 by nanchuci/g' ./package/lean/default-settings/files/zzz-default-settings
+#sed -i 's/22.5.5/22.5.5 by gustavo8000br/g' ./package/lean/default-settings/files/zzz-default-settings
 
 # 修改banne文件（banne文件在根目录）（不要修改此行代码,怕弄的diy-lede.sh文件全失效,不需要的话前面加#，或者全行代码删除了）
 #rm -rf ./package/base-files/files/etc/banne && cd .. && cp -f ./banner openwrt/package/base-files/files/etc/ && cd openwrt
@@ -84,7 +84,7 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-iptvhelper
 git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
 
 # Add luci-app-adguardhome
-#git clone --depth=1 https://github.com/SuLingGG/luci-app-adguardhome
+git clone --depth=1 https://github.com/SuLingGG/luci-app-adguardhome
 
 # Add luci-app-diskman
 git clone --depth=1 https://github.com/SuLingGG/luci-app-diskman
@@ -103,13 +103,13 @@ cp luci-app-diskman/Parted.Makefile parted/Makefile
 #git clone --depth=1 https://github.com/Ausaci/luci-app-nat6-helper
 
 # Add luci-theme-argon
-#cd lede/package/lean
-#rm -rf luci-theme-argon 
-#git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
-#git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
+cd lede/package/lean
+rm -rf luci-theme-argon 
+git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon
+git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
 
 # Add luci-theme-rosy
-#git clone --depth=1 -b openwrt-18.06 https://github.com/shiyu1314/luci-theme-rosy
+#git clone --depth=1 https://github.com/shiyu1314/luci-theme-rosy
 #rm -rf ../lean/luci-theme-rosy
 
 # Add tmate
