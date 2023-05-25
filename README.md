@@ -1,3 +1,1 @@
-# Auto-Build-OpenWrt
-# ÔÆ±àÒëmsg1500-immortalwrt¹Ì¼þ
-# build msg1500 by nanchuci
+# Auto-Build-OpenWrt for ZTE-E8820S
