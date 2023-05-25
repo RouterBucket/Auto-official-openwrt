@@ -13,16 +13,16 @@
 sed -i 's/192.168.1.1/192.168.123.1/g' package/base-files/files/bin/config_generate
 
 # 修改主机名字，把MSG1500修改你喜欢的就行（不能纯数字或者使用中文）
-sed -i 's/OpenWrt/MSG1500/g' package/base-files/files/bin/config_generate
+sed -i 's/OpenWrt/E8820S/g' package/base-files/files/bin/config_generate
 
 # 修改开源驱动wifi名称
-#sed -i 's/OpenWrt/RAISECOM-MSG1500-$/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+#sed -i 's/OpenWrt/ZTE-E8820S-$/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 # 修改闭源驱动2G wifi名称
-sed -i 's/OpenWRT-2.4G/MSG1500/g' package/kernel/mt-drivers/mt7615d/files/lib/wifi/mt_dbdc.sh
+sed -i 's/OpenWRT-2.4G/E8820S/g' package/kernel/mt-drivers/mt7615d/files/lib/wifi/mt_dbdc.sh
 
 # 修改闭源驱动5G wifi名称
-sed -i 's/OpenWRT-5G/MSG1500-5G/g' package/kernel/mt-drivers/mt7615d/files/lib/wifi/mt_dbdc.sh
+sed -i 's/OpenWRT-5G/E8820S-5G/g' package/kernel/mt-drivers/mt7615d/files/lib/wifi/mt_dbdc.sh
 
 # 修改内核版本为5.15
 sed -i 's/5.10/5.15/g' target/linux/ramips/Makefile
@@ -34,7 +34,7 @@ sed -i 's/5.10/5.15/g' target/linux/ramips/Makefile
 #rm -rf ./package/base-files/files/etc/banne && cd .. && cp -f ./banner openwrt/package/base-files/files/etc/ && cd openwrt
 
 # 更改时区
-sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
+sed -i "s/'UTC'/'BRST'\n        set system.@system[-1].zonename='America\/Sao_Paulo'/g" package/base-files/files/bin/config_generate
 
 #修正连接数
 sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' package/base-files/files/etc/sysctl.conf
