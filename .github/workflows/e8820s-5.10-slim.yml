@@ -11,7 +11,9 @@
 
 name: OpenWrt-e8820s 5.10 Closed source ultra-slim firmware
 
-on: 
+on:
+  workflow_dispatch:
+  
   release:
     types: [published]
 
